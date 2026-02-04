@@ -35,3 +35,21 @@
         display: flex;
         align-items: center;
     }
+
+
+    #filters a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Mobile spacing */
+@media (max-width:768px){
+  #filters{
+    justify-content: center;
+  }
+
+  .filter{
+    width: 30%;
+    margin-right: 0;
+  }
+}
