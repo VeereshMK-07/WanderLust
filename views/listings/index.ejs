@@ -1,91 +1,102 @@
 <% layout("/layouts/boilerplate") %>
 
-<!-- <div class="filters-wrapper">
-<button class="btn btn-outline-dark d-md-none mb-2" id="toggleFilters">
-  ☰ Filters
-</button> -->
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
- <div id="filters">
-    <a href="/listings/category/trending" style="text-decoration:none;color:inherit;">
-    <div class="filter">
-        <div><i class="fa-solid fa-fire"></i></div>
-        <p>Trending</p>
+ <nav class="navbar navbar-expand-md">
+  <div class="container-fluid">
+
+    <!-- Mobile Toggle Button -->
+    <button 
+      class="navbar-toggler mb-2"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#filtersNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible Filters -->
+    <div class="collapse navbar-collapse" id="filtersNav">
+      <div id="filters">
+
+        <a href="/listings/category/trending" style="text-decoration:none;color:inherit;">
+          <div class="filter">
+            <div><i class="fa-solid fa-fire"></i></div>
+            <p>Trending</p>
+          </div>
+        </a>
+
+        <a href="/listings/category/rooms" style="text-decoration:none;color:inherit;">
+          <div class="filter">
+            <div><i class="fa-solid fa-bed"></i></div>
+            <p>Rooms</p>
+          </div>
+        </a>
+
+        <a href="/listings/category/iconic" style="text-decoration:none;color:inherit;">
+          <div class="filter">
+            <div><i class="fa-solid fa-mountain-city"></i></div>
+            <p>Iconic Cities</p>
+          </div>
+        </a>
+
+        <a href="/listings/category/mountains" style="text-decoration:none;color:inherit;">
+          <div class="filter">
+            <div><i class="fa-solid fa-mountain"></i></div>
+            <p>Mountains</p>
+          </div>
+        </a>
+
+        <a href="/listings/category/castles" style="text-decoration:none;color:inherit;">
+          <div class="filter">
+            <div><i class="fa-brands fa-fort-awesome"></i></div>
+            <p>Castles</p>
+          </div>
+        </a>
+
+        <a href="/listings/category/pools" style="text-decoration:none;color:inherit;">
+          <div class="filter">
+            <div><i class="fa-solid fa-person-swimming"></i></div>
+            <p>Amazing Pools</p>
+          </div>
+        </a>
+
+        <a href="/listings/category/camping" style="text-decoration:none;color:inherit;">
+          <div class="filter">
+            <div><i class="fa-solid fa-campground"></i></div>
+            <p>Camping</p>
+          </div>
+        </a>
+
+        <a href="/listings/category/farms" style="text-decoration:none;color:inherit;">
+          <div class="filter">
+            <div><i class="fa-solid fa-tractor"></i></div>
+            <p>Farms</p>
+          </div>
+        </a>
+
+        <a href="/listings/category/arctic" style="text-decoration:none;color:inherit;">
+          <div class="filter">
+            <div><i class="fa-regular fa-snowflake"></i></div>
+            <p>Arctic</p>
+          </div>
+        </a>
+
+        <a href="/listings/category/domes" style="text-decoration:none;color:inherit;">
+          <div class="filter">
+            <div><i class="fa-solid fa-igloo"></i></div>
+            <p>Domes</p>
+          </div>
+        </a>
+
+        <a href="/listings/category/boats" style="text-decoration:none;color:inherit;">
+          <div class="filter">
+            <div><i class="fa-solid fa-ship"></i></div>
+            <p>Boats</p>
+          </div>
+        </a>
+
+      </div>
     </div>
-    </a>
-
-    <a href="/listings/category/rooms" style="text-decoration:none;color:inherit;">
-    <div class="filter">
-        <div><i class="fa-solid fa-bed"></i></div>
-        <p>Rooms</p>
-    </div>
-    </a>
-
-    <a href="/listings/category/iconic" style="text-decoration:none;color:inherit;">
-    <div class="filter">
-        <div><i class="fa-solid fa-mountain-city"></i></div>
-        <p>Iconic Cities</p>
-    </div>
-    </a>
-
-    <a href="/listings/category/mountains" style="text-decoration:none;color:inherit;">
-    <div class="filter">
-        <div><i class="fa-solid fa-mountain"></i></div>
-        <p>Mountains</p>
-    </div>
-    </a>
-
-    <a href="/listings/category/castles" style="text-decoration:none;color:inherit;">
-    <div class="filter">
-        <div><i class="fa-brands fa-fort-awesome"></i></div>
-        <p>Castles</p>
-    </div>
-    </a>
-
-    <a href="/listings/category/pools" style="text-decoration:none;color:inherit;">
-    <div class="filter">
-        <div><i class="fa-solid fa-person-swimming"></i></div>
-        <p>Amazing Pools</p>
-    </div>
-    </a>
-
-    <a href="/listings/category/camping" style="text-decoration:none;color:inherit;">
-    <div class="filter">
-        <div><i class="fa-solid fa-campground"></i></div>
-        <p>Camping</p>
-    </div>
-    </a>
-
-    <a href="/listings/category/farms" style="text-decoration:none;color:inherit;">
-    <div class="filter">
-        <div><i class="fa-solid fa-tractor"></i></div>
-        <p>Farms</p>
-    </div>
-    </a>
-
-    <a href="/listings/category/arctic" style="text-decoration:none;color:inherit;">
-    <div class="filter">
-        <div><i class="fa-regular fa-snowflake"></i></div>
-        <p>Arctic</p>
-     </div>
-    </a>
-
-    <a href="/listings/category/domes" style="text-decoration:none;color:inherit;">
-    <div class="filter">
-        <div><i class="fa-solid fa-igloo"></i></div>
-        <p>Domes</p>
-    </div>
-    </a>
-
-    <a href="/listings/category/boats" style="text-decoration:none;color:inherit;">
-    <div class="filter">
-        <div><i class="fa-solid fa-ship"></i></div>
-        <p>Boats</p>
-    </div>
-    </a>
-
-</div>
+  </div>
 </nav>
-<!-- </div> -->
  
 
 
