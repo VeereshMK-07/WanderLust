@@ -17,10 +17,10 @@
     .filter p{
         font-size: 0.8rem;
     }
-    .filter a{
-    text-decoration: none;
-    color: black;
-    }
+    .filter a {
+        text-decoration: none;
+        color: black;
+        }
 
     .tax-info{
         display: none;

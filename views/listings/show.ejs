@@ -101,18 +101,5 @@
 </script>
 <script src="/js/map.js"></script>
 
-<script>
-async function startPayment(title, price) {
-  const res = await fetch("/payment/create-checkout-session", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({ title, price })
-  });
 
-  const data = await res.json();
-  window.location.href = data.url;
-}
-</script>
 <br><br>
