@@ -195,3 +195,15 @@
   -webkit-transition: background-position .7s;
   transition: background-position .7s;
 }
+
+
+.card.col-5{
+  width:100% !important;
+  margin-left:0 !important;
+}
+
+@media (min-width:768px){
+  .card.col-5{
+    width:48% !important;
+  }
+}

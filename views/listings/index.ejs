@@ -1,14 +1,16 @@
 <% layout("/layouts/boilerplate") %>
 
- <nav class="navbar navbar-expand-md">
+<!-- FILTER NAVBAR -->
+<nav class="navbar navbar-expand-md bg-body-light mt-3">
   <div class="container-fluid">
 
-    <!-- Mobile Toggle Button -->
-    <button 
+    <!-- Filter Toggle Button (mobile) -->
+    <button
       class="navbar-toggler mb-2"
       type="button"
       data-bs-toggle="collapse"
-      data-bs-target="#filtersNav">
+      data-bs-target="#filtersNav"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -16,85 +18,86 @@
     <div class="collapse navbar-collapse" id="filtersNav">
       <div id="filters">
 
-        <a href="/listings/category/trending" style="text-decoration:none;color:inherit;">
+        <a href="/listings/category/trending">
           <div class="filter">
-            <div><i class="fa-solid fa-fire"></i></div>
+            <i class="fa-solid fa-fire"></i>
             <p>Trending</p>
           </div>
         </a>
 
-        <a href="/listings/category/rooms" style="text-decoration:none;color:inherit;">
+        <a href="/listings/category/rooms">
           <div class="filter">
-            <div><i class="fa-solid fa-bed"></i></div>
+            <i class="fa-solid fa-bed"></i>
             <p>Rooms</p>
           </div>
         </a>
 
-        <a href="/listings/category/iconic" style="text-decoration:none;color:inherit;">
+        <a href="/listings/category/iconic">
           <div class="filter">
-            <div><i class="fa-solid fa-mountain-city"></i></div>
+            <i class="fa-solid fa-mountain-city"></i>
             <p>Iconic Cities</p>
           </div>
         </a>
 
-        <a href="/listings/category/mountains" style="text-decoration:none;color:inherit;">
+        <a href="/listings/category/mountains">
           <div class="filter">
-            <div><i class="fa-solid fa-mountain"></i></div>
+            <i class="fa-solid fa-mountain"></i>
             <p>Mountains</p>
           </div>
         </a>
 
-        <a href="/listings/category/castles" style="text-decoration:none;color:inherit;">
+        <a href="/listings/category/castles">
           <div class="filter">
-            <div><i class="fa-brands fa-fort-awesome"></i></div>
+            <i class="fa-brands fa-fort-awesome"></i>
             <p>Castles</p>
           </div>
         </a>
 
-        <a href="/listings/category/pools" style="text-decoration:none;color:inherit;">
+        <a href="/listings/category/pools">
           <div class="filter">
-            <div><i class="fa-solid fa-person-swimming"></i></div>
+            <i class="fa-solid fa-person-swimming"></i>
             <p>Amazing Pools</p>
           </div>
         </a>
 
-        <a href="/listings/category/camping" style="text-decoration:none;color:inherit;">
+        <a href="/listings/category/camping">
           <div class="filter">
-            <div><i class="fa-solid fa-campground"></i></div>
+            <i class="fa-solid fa-campground"></i>
             <p>Camping</p>
           </div>
         </a>
 
-        <a href="/listings/category/farms" style="text-decoration:none;color:inherit;">
+        <a href="/listings/category/farms">
           <div class="filter">
-            <div><i class="fa-solid fa-tractor"></i></div>
+            <i class="fa-solid fa-tractor"></i>
             <p>Farms</p>
           </div>
         </a>
 
-        <a href="/listings/category/arctic" style="text-decoration:none;color:inherit;">
+        <a href="/listings/category/arctic">
           <div class="filter">
-            <div><i class="fa-regular fa-snowflake"></i></div>
+            <i class="fa-regular fa-snowflake"></i>
             <p>Arctic</p>
           </div>
         </a>
 
-        <a href="/listings/category/domes" style="text-decoration:none;color:inherit;">
+        <a href="/listings/category/domes">
           <div class="filter">
-            <div><i class="fa-solid fa-igloo"></i></div>
+            <i class="fa-solid fa-igloo"></i>
             <p>Domes</p>
           </div>
         </a>
 
-        <a href="/listings/category/boats" style="text-decoration:none;color:inherit;">
+        <a href="/listings/category/boats">
           <div class="filter">
-            <div><i class="fa-solid fa-ship"></i></div>
+            <i class="fa-solid fa-ship"></i>
             <p>Boats</p>
           </div>
         </a>
 
       </div>
     </div>
+
   </div>
 </nav>
  
@@ -148,14 +151,6 @@
     });
 </script>
 
-<script>
-const toggleBtn = document.getElementById("toggleFilters");
-const filters = document.getElementById("filters");
-
-toggleBtn.addEventListener("click", () => {
-    filters.classList.toggle("show");
-});
-</script>
 
 
 
