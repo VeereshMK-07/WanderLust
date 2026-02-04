@@ -10,7 +10,7 @@ body{
 
 /*Navbar Styling*/
 .navbar{
-    height: 5rem;
+    min-height: 5rem;
     background-color: white;
 }
 .fa-compass{
@@ -109,7 +109,7 @@ body{
 
 /* Map Responsive Fix */
 #map{
-    width: 100%;
+    width: 400px;
     max-width: 100%;
 }
 
