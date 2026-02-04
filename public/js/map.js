@@ -21,10 +21,11 @@ const redIcon = L.icon({
 // Marker + popup (auto open)
 L.marker([mapLat, mapLng], { icon: redIcon })
   .addTo(map)
-  .bindPopup(`
-    <h5>${mapTitle}</h5>
-    <p>Exact location will be provided after booking!</p>
-  `)
+  .bindPopup(
+  `<h5>${mapTitle}</h5>
+   <p>Exact location will be provided after booking!</p>`
+)
+
   .openPopup();
 
 // Center map
