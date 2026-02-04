@@ -1,46 +1,10 @@
 <% layout("/layouts/boilerplate") %>
 
-<style>
-    #filters {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
-    .filter{
-        text-align: center;
-        margin-right: 2rem;
-        margin-top: 2rem;
-        opacity: 0.7;
-    }
-    .filter:hover{
-        opacity: 1;
-        cursor: pointer;
-    }
-    .filter p{
-        font-size: 0.8rem;
-    }
-    .filter a{
-    text-decoration: none;
-    color: inherit;
-    }
-
-    .tax-info{
-        display: none;
-    }
-
-    .tax-toggle{
-        border: 1px solid black;
-        border-radius: 1rem;
-        height: 3.25rem;
-        padding: 1rem;
-        margin-left: 2rem;
-        display: flex;
-        align-items: center;
-    }
-</style>
+<div class="filters-wrapper">
+<button class="btn btn-outline-dark d-md-none mb-2" id="toggleFilters">
+  ☰ Filters
+</button>
  <div id="filters">
-        
     <a href="/listings/category/trending" style="text-decoration:none;color:inherit;">
     <div class="filter">
         <div><i class="fa-solid fa-fire"></i></div>
@@ -118,6 +82,11 @@
     </div>
     </a>
 
+</div>
+</div>
+ 
+
+
         
         <div class="tax-toggle">
             <div class="form-check-reverse form-switch">
@@ -165,5 +134,15 @@
         }
     });
 </script>
+
+<script>
+const toggleBtn = document.getElementById("toggleFilters");
+const filters = document.getElementById("filters");
+
+toggleBtn.addEventListener("click", () => {
+    filters.classList.toggle("show");
+});
+</script>
+
 
 
