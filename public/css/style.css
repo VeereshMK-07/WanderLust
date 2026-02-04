@@ -108,23 +108,9 @@ body{
 
 
 /* Map Responsive Fix */
-#map{
-    width: 400px;
-    max-width: 100%;
+#map {
+   height: 300px;
+   width: 100%;
+   border-radius: 12px;
 }
-
-/* Mobile */
-@media (max-width:768px){
-    #map{
-        height: 250px;
-    }
-}
-
-/* Tablet */
-@media (min-width:769px) and (max-width:992px){
-    #map{
-        height: 300px;
-    }
-}
-
 
