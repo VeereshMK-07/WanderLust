@@ -36,7 +36,7 @@
         align-items: center;
     }
 
-    .filters-wrapper{
+    /* .filters-wrapper{
     width:100%;
     }
 
@@ -55,11 +55,11 @@
         margin-top:1rem;
         width:100%;
     }
-}
+} */
 
 
 
-   /* Reviews Responsive Fix */
+   /* Reviews Responsive Fix
 
 
 @media (max-width:768px){
@@ -85,5 +85,5 @@
         width:100%;
         font-size:0.95rem;
     }
-}
+} */
 
