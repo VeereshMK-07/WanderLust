@@ -29,4 +29,4 @@ L.marker([mapLat, mapLng], { icon: redIcon })
   .openPopup();
 
 // Center map
-map.setView([mapLat, mapLng], 9);
+map.setView([mapLat, mapLng], 12);
