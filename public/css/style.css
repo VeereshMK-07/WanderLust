@@ -109,9 +109,8 @@ body{
 
 /* Map Responsive Fix */
 #map{
-  height: 300px;
+  height: 500px;
   width: 100% !important;   /* VERY IMPORTANT */
   max-width: 100%;
-  border-radius: 12px;
 }
 
