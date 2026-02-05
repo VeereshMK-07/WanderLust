@@ -109,7 +109,7 @@ body{
 
 /* Map Responsive Fix */
 #map{
-  height: 500px;
+  height: 350px;
   width: 100% !important;   /* VERY IMPORTANT */
   max-width: 100%;
 }

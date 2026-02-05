@@ -88,11 +88,12 @@
 
   </div>
 <% } %>
- <div class="col-12 col-md-6 offset-md-3 mb-3">
-        <h3>Where you'll be</h3>
-        <div id="map"></div>
-    </div>
+ <div class="row mt-4">
+  <div class="col-12">
+    <div id="map"></div>
+  </div>
 </div>
+
 
 <script>
   const mapLat = Number("<%= listing.geometry.coordinates[1] %>");
