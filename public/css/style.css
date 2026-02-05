@@ -110,8 +110,8 @@ body{
 /* Map Responsive Fix */
 #map{
   height: 300px;
-  width: 100%;
+  width: 100% !important;   /* VERY IMPORTANT */
+  max-width: 100%;
   border-radius: 12px;
-  margin-top: 1rem;
 }
 
