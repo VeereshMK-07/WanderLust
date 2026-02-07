@@ -73,16 +73,14 @@
 
     <% for(review of listing.reviews) { %>
       <div class="card col-12 col-md-5 ms-md-3 mb-3">
-        <div class="card-body">
-          <br>
+        <div class="card-body"><br>
           <h5 class="card-title">@<%= review.author.username %></h5>
           <p class="starability-result card-text" data-rating="<%= review.rating %>"></p>
           <p class="card-text"><%= review.comment %></p>
         </div>
         
         <form class="mb-3 ms-3" method="POST"
-          action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE">
-          <br><br>
+          action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE"><br><br>
           <button class="btn btn-sm btn-dark">Delete</button>
         </form>
       </div>
