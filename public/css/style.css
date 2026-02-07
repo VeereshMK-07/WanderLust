@@ -24,12 +24,11 @@ body{
 /*Footer Styling*/
 footer{
   width:100%;
+  background:#ebebeb;
 }
 
 .f-info{
-  background-color:#ebebeb;
-  height:8rem;
-  width:100%;
+  min-height:8rem;
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
@@ -42,7 +41,6 @@ footer{
 .f-info-links{
   width:100%;
 }
-
 /* styling for the Cards */
 .listing-card{
     border: none !important;
