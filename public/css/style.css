@@ -22,13 +22,17 @@ body{
 }
 
 /*Footer Styling*/
-footer{
+.site-footer{
   width:100%;
   background:#ebebeb;
+  margin:0;
+  padding:0;
 }
 
 .f-info{
-  min-height:8rem;
+  max-width:1200px;
+  margin:auto;
+  height:8rem;
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
