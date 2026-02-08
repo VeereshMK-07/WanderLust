@@ -8,8 +8,8 @@ body{
     flex-direction: column;
     min-height: 100vh;
 } 
-.container{
-    flex: 1;
+.main-content {
+  flex: 1;
 }
 
 /*Navbar Styling*/
@@ -33,16 +33,16 @@ body{
   padding:0;
 }
 
-.f-info{
-  max-width:1200px;
-  margin:auto;
-  height:8rem;
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
+.f-info {
+  width: 100%;
+  padding: 1.5rem 2rem;   /* spacing instead of fixed height */
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: center;
 }
+
+
 
 .f-info-socials,
 .f-info-brand,
@@ -60,7 +60,7 @@ body{
     object-fit: cover !important;
 }
 .card-body{
-    padding: 0 !important;
+    padding: 1.25rem !important;
 }
 .card-text p {
     font-weight: 400 !important;
@@ -112,4 +112,5 @@ body{
   max-width: 100% !important;
   display: block;
 }
+
 
