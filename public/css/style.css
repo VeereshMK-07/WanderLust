@@ -16,6 +16,7 @@ body{
 .navbar{
     min-height: 5rem;
     background-color: white;
+    flex-wrap: wrap;
 }
 .fa-compass{
     color: #fe424d;
