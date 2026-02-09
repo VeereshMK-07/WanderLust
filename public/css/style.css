@@ -114,12 +114,5 @@ body{
   display: block;
 }
 
-@media (max-width: 991px) {
-  #mobileFilters.collapse,
-  #mobileFilters.collapse.show {
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-  }
-}
 
 
