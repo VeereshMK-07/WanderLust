@@ -7,26 +7,28 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    padding-top: 5rem;
 } 
+
 .main-content {
   flex: 1;
 }
 
-/*Navbar Styling*/
 .navbar{
     min-height: 5rem;
     background-color: white;
     flex-wrap: wrap;
 }
+
 .fa-compass{
     color: #fe424d;
     font-size: 2rem;
 }
+
 .nav-link{
-    color: #222222  !important;    /* !important is used to override bootstrap default styling */
+    color: #222222 !important;
 }
 
-/*Footer Styling*/
 .site-footer{
   width:100%;
   background:#ebebeb;
@@ -36,62 +38,61 @@ body{
 
 .f-info {
   width: 100%;
-  padding: 1.5rem 2rem;   /* spacing instead of fixed height */
+  padding: 1.5rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   text-align: center;
 }
 
-
-
 .f-info-socials,
 .f-info-brand,
 .f-info-links{
   width:100%;
 }
-/* styling for the Cards */
+
 .listing-card{
     border: none !important;
     margin-bottom: 2rem;
 }
+
 .card-img-top {
     border-radius: 1rem !important;
     width: 100% !important;
     object-fit: cover !important;
 }
+
 .card-body{
     padding: 1.25rem !important;
 }
+
 .card-text p {
     font-weight: 400 !important;
 }
+
 .listing-link {
     text-decoration: none;
 }
 
-/*Card Hover Effect*/
 .card-img-overlay{
     opacity: 0;
 }
+
 .card-img-overlay:hover{
     opacity: 0.2;
     background-color: white;
 }
 
-/*New Listing Page Styling*/
 .add-btn{
     background-color: #fe424d !important;
     border: none !important;
 }
 
-/*Edit Listing Page Styling*/
 .edit-btn{
     background-color: #fe424d !important;
     border: none !important;
 }
 
-/*Show Listing Page Styling*/
 .show-img{
     height: 30vh;
 }
@@ -105,14 +106,9 @@ body{
     padding-right: 0;
 }
 
-
-/* Map Responsive Fix */
 #map {
   height: 350px;
   width: 100% !important;
   max-width: 100% !important;
   display: block;
 }
-
-
-
