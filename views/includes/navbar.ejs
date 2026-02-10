@@ -53,6 +53,32 @@
     display: none;
   }
 }
+
+/* ===== DARK MODE ===== */
+body.dark {
+  background-color: #121212;
+  color: #eaeaea;
+}
+
+body.dark .navbar {
+  background-color: #1c1c1c !important;
+  border-bottom-color: #2a2a2a;
+}
+
+body.dark .nav-link {
+  color: #eaeaea !important;
+}
+
+body.dark .nav-link:hover {
+  color: #fe424d !important;
+}
+
+body.dark .search-inp {
+  background-color: #1f1f1f;
+  color: #fff;
+  border-color: #333;
+}
+
 </style>
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
@@ -105,3 +131,29 @@
     </div>
   </div>
 </nav>
+
+<script>
+  const toggleBtn = document.getElementById("themeToggle");
+
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    // Optional: change text/icon
+    toggleBtn.querySelector("span").textContent =
+      document.body.classList.contains("dark")
+        ? " ☀️ Light Mode"
+        : " 🌙 Dark Mode";
+  });
+
+  // Load saved theme
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+}
+
+// Save theme
+toggleBtn.addEventListener("click", () => {
+  const theme = document.body.classList.contains("dark") ? "dark" : "light";
+  localStorage.setItem("theme", theme);
+});
+</script>
+
