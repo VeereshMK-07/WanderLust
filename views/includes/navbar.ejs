@@ -32,28 +32,18 @@
 }
 
 .container-fluid{
-  padding-left:1.5rem !important;
-  padding-right:1.5rem !important;
+  padding-left:0.5rem !important;
+  padding-right:0.5rem !important;
 }
-.navbar-nav .nav-link{
-  padding:0.5rem 0.75rem;
-}
-
 
 @media (min-width:768px){
   .search-inp{
     width:420px;
   }
 }
-
-@media (min-width: 768px) {
-  #themeToggle span {
-    display: none;
-  }
-}
 </style>
 
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top py-1">
   <div class="container-fluid">
     <a class="navbar-brand" href="/listings">
       <i class="fa-regular fa-compass"></i>
@@ -93,7 +83,6 @@
         <% if(currUser) { %>
           <a class="nav-link" href="/logout"><b>Log out</b></a> 
         <% } %>
-
       </div>
 
     </div>
