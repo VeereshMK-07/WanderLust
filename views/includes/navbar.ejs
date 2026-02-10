@@ -3,7 +3,7 @@
   background-color:#fe424d;
   color:#fff;
   border-radius:25px;
-  padding:0.3rem 0.9rem !important;
+  padding:0.4rem 1rem;
   font-size:0.9rem;
 }
 .search-btn:hover{
@@ -11,61 +11,63 @@
   color:#fff;
 }
 .search-btn i{
-  display:inline;
   margin-right:0.5rem;
 }
 .search-inp{
   border-radius:25px;
-  padding:0.3rem 0.8rem !important;
+  padding:0.4rem 0.9rem;
   flex:1;
-  min-width:250px;
+  min-width:0;
   font-size:0.9rem;
 }
 
 .navbar{
-  padding-top:0.3rem !important;
-  padding-bottom:0.3rem !important;
-  min-height:auto !important;
+  padding-top:0.9rem;
+  padding-bottom:0.9rem;
+  min-height:75px;
   z-index:1000;
 }
 
 .container-fluid{
-  padding-left:0.5rem !important;
-  padding-right:0.5rem !important;
+  padding-left:1rem;
+  padding-right:1rem;
 }
 
-@media (min-width:768px){
+@media(max-width:768px){
+  .search-inp{
+    width:100%;
+  }
+  .search-btn{
+    width:100%;
+  }
+}
+
+@media(min-width:768px){
   .search-inp{
     width:420px;
   }
 }
 </style>
 
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top py-1">
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="/listings">
       <i class="fa-regular fa-compass"></i>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+    
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    
-<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
       <div class="navbar-nav">
         <a class="nav-link" href="/listings">Explore</a>
       </div>
 
       <form class="d-flex flex-column flex-md-row gap-2 mx-auto" role="search" action="/listings/search" method="GET">
-        <input
-          name="q"
-          class="form-control me-2 search-inp"
-          type="search"
-          placeholder="Search destinations"
-          aria-label="Search"
-        />
+        <input name="q" class="form-control search-inp" type="search" placeholder="Search destinations">
         <button class="btn search-btn" type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>Search
         </button>
