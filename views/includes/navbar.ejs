@@ -66,25 +66,32 @@
         <a class="nav-link" href="/listings">Explore</a>
       </div>
 
-      <form class="d-flex flex-column flex-md-row gap-2 mx-auto" role="search" action="/listings/search" method="GET">
-        <input name="q" class="form-control search-inp" type="search" placeholder="Search destinations">
-        <button class="btn search-btn" type="submit">
-          <i class="fa-solid fa-magnifying-glass"></i>Search
-        </button>
-      </form>
+<form class="d-flex flex-column flex-md-row gap-2 mx-auto order-3 order-md-2 mt-2 mt-md-0"
+      role="search" action="/listings/search" method="GET">
+  <input name="q" class="form-control search-inp" type="search"
+         placeholder="Search destinations">
+  <button class="btn search-btn" type="submit">
+    <i class="fa-solid fa-magnifying-glass"></i>Search
+  </button>
+</form>
 
-      <div class="navbar-nav ms-md-3">
-        <a class="nav-link" href="/listings/new">Airbnb your home</a> 
-        <% if(!currUser) { %>
-          <a class="nav-link" href="/signup"><b>Sign Up</b></a>
-          <a class="nav-link" href="/login"><b>Log in</b></a>
-        <% } %>
+<div class="collapse navbar-collapse order-4 order-md-3"
+     id="navbarNavAltMarkup">
 
-        <% if(currUser) { %>
-          <a class="nav-link" href="/logout"><b>Log out</b></a> 
-        <% } %>
-      </div>
+  <div class="navbar-nav">
+    <a class="nav-link" href="/listings">Explore</a>
+  </div>
 
-    </div>
+  <div class="navbar-nav ms-md-3">
+    <a class="nav-link" href="/listings/new">Airbnb your home</a> 
+    <% if(!currUser) { %>
+      <a class="nav-link" href="/signup"><b>Sign Up</b></a>
+      <a class="nav-link" href="/login"><b>Log in</b></a>
+    <% } %>
+    <% if(currUser) { %>
+      <a class="nav-link" href="/logout"><b>Log out</b></a> 
+    <% } %>
+  </div>
+
   </div>
 </nav>
