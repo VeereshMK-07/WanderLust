@@ -43,6 +43,12 @@
     width:420px;
   }
 }
+
+@media (min-width: 768px) {
+  #themeToggle span {
+    display: none;
+  }
+}
 </style>
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top py-1">
@@ -85,6 +91,11 @@
         <% if(currUser) { %>
           <a class="nav-link" href="/logout"><b>Log out</b></a> 
         <% } %>
+
+        <!-- Dark mode toggle -->
+        <button class="btn nav-link text-start" id="themeToggle">
+              🌙 Dark Mode
+        </button>
       </div>
 
     </div>
