@@ -23,8 +23,7 @@
 }
 
 .navbar{
-  padding-top:0.8rem !important;
-  padding-bottom:0.8rem !important;
+  padding:0.8rem !important;
   min-height:72px !important;
   z-index:1000;
 }
@@ -37,6 +36,11 @@
   padding:0.5rem 0.75rem;
 }
 
+#themeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
 @media (min-width:768px){
   .search-inp{
@@ -51,7 +55,7 @@
 }
 </style>
 
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top py-1">
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="/listings">
       <i class="fa-regular fa-compass"></i>
@@ -93,8 +97,8 @@
         <% } %>
 
         <!-- Dark mode toggle -->
-        <button class="btn nav-link text-start" id="themeToggle">
-              🌙 Dark Mode
+        <button type="button" class="btn nav-link text-start" id="themeToggle">
+             <span> 🌙 Dark Mode</span>
         </button>
       </div>
 
