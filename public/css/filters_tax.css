@@ -2,6 +2,7 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        margin-top: 1.5rem;
         
     }
 
@@ -37,4 +38,16 @@
         align-items: center;
     }
 
+@media (max-width:768px){
 
+  #filters{
+    display:block;
+    margin-top:1.2rem;
+  }
+
+  .tax-toggle{
+    margin-left:0;
+    margin-top:0.8rem;
+  }
+
+}
