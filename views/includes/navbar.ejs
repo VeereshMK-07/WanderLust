@@ -4,19 +4,24 @@
   padding-top: 100px;
 }
 /* Search Button */
-.search-btn{
-  background-color:#fe424d;
-  color:#fff;
-  border-radius:25px;
-  padding:0.4rem 1rem;
-  font-size:0.9rem;
+.search-btn {
+  background-color: #fe424d !important; 
+  color: #fff !important;               border-radius: 25px;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
   transition: opacity 0.2s;
-  border:none;
+  border: none;
+  cursor: pointer;
 }
 
-.search-btn:hover{
+.search-btn:hover,
+.search-btn:focus,
+.search-btn:active {
   opacity: 0.9;
-  color:#fff;
+  color: #fff !important;
+  background-color: #fe424d !important;
+  outline: none;
+  box-shadow: none !important;
 }
 
 .search-btn i{
@@ -89,7 +94,7 @@
             method="GET">
         <input name="q"
                class="form-control search-inp"
-               type="search"
+               type="text"
                placeholder="Search destinations">
         <button class="btn search-btn" type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>Search
@@ -113,3 +118,8 @@
     </div>
   </div>
 </nav>
+
+<script>
+  const navbarHeight = document.querySelector('.navbar').offsetHeight;
+  document.querySelector('.filters-section').style.top = navbarHeight + 'px';
+</script>
