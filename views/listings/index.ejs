@@ -1,146 +1,115 @@
 <% layout("/layouts/boilerplate") %>
 
 <!-- FILTERS SECTION -->
-<div class="container-fluid mt-3">
+<div class="filters-section">
+  <div class="container-fluid mt-3">
 
-  <!-- Toggle Button (Mobile Only) -->
-  <button
-    class="btn btn-outline-dark d-md-none mb-3"
-    data-bs-toggle="collapse"
-    data-bs-target="#filtersNav"
-  >
-    ☰ Filters
-  </button>
+    <!-- Toggle Button (Mobile Only) -->
+    <button class="btn btn-outline-dark d-md-none mb-3"
+      data-bs-toggle="collapse"
+      data-bs-target="#filtersNav">
+      ☰ Filters
+    </button>
 
-  <!-- Filters -->
-  <div class="collapse d-md-block" id="filtersNav">
-    <div id="filters" class="d-flex flex-nowrap overflow-auto gap-3 pb-2">
-
-      <a href="/listings/category/trending">
-        <div class="filter">
-          <i class="fa-solid fa-fire"></i>
-          <p>Trending</p>
-        </div>
-      </a>
-
-      <a href="/listings/category/rooms">
-        <div class="filter">
-          <i class="fa-solid fa-bed"></i>
-          <p>Rooms</p>
-        </div>
-      </a>
-
-      <a href="/listings/category/iconic">
-        <div class="filter">
-          <i class="fa-solid fa-mountain-city"></i>
-          <p>Iconic Cities</p>
-        </div>
-      </a>
-
-      <a href="/listings/category/mountains">
-        <div class="filter">
-          <i class="fa-solid fa-mountain"></i>
-          <p>Mountains</p>
-        </div>
-      </a>
-
-      <a href="/listings/category/castles">
-        <div class="filter">
-          <i class="fa-brands fa-fort-awesome"></i>
-          <p>Castles</p>
-        </div>
-      </a>
-
-      <a href="/listings/category/pools">
-        <div class="filter">
-          <i class="fa-solid fa-person-swimming"></i>
-          <p>Amazing Pools</p>
-        </div>
-      </a>
-
-      <a href="/listings/category/camping">
-        <div class="filter">
-          <i class="fa-solid fa-campground"></i>
-          <p>Camping</p>
-        </div>
-      </a>
-
-      <a href="/listings/category/farms">
-        <div class="filter">
-          <i class="fa-solid fa-tractor"></i>
-          <p>Farms</p>
-        </div>
-      </a>
-
-      <a href="/listings/category/arctic">
-        <div class="filter">
-          <i class="fa-regular fa-snowflake"></i>
-          <p>Arctic</p>
-        </div>
-      </a>
-
-      <a href="/listings/category/domes">
-        <div class="filter">
-          <i class="fa-solid fa-igloo"></i>
-          <p>Domes</p>
-        </div>
-      </a>
-
-      <a href="/listings/category/boats">
-        <div class="filter">
-          <i class="fa-solid fa-ship"></i>
-          <p>Boats</p>
-        </div>
-      </a>
-
+    <!-- Filters -->
+    <div class="collapse d-md-block" id="filtersNav">
+      <div id="filters" class="d-flex flex-nowrap overflow-auto gap-3 pb-2">
+        <a href="/listings/category/trending">
+          <div class="filter"><i class="fa-solid fa-fire"></i><p>Trending</p></div>
+        </a>
+        <a href="/listings/category/rooms">
+          <div class="filter"><i class="fa-solid fa-bed"></i><p>Rooms</p></div>
+        </a>
+        <a href="/listings/category/iconic">
+          <div class="filter"><i class="fa-solid fa-mountain-city"></i><p>Iconic Cities</p></div>
+        </a>
+        <a href="/listings/category/mountains">
+          <div class="filter"><i class="fa-solid fa-mountain"></i><p>Mountains</p></div>
+        </a>
+        <a href="/listings/category/castles">
+          <div class="filter"><i class="fa-brands fa-fort-awesome"></i><p>Castles</p></div>
+        </a>
+        <a href="/listings/category/pools">
+          <div class="filter"><i class="fa-solid fa-person-swimming"></i><p>Amazing Pools</p></div>
+        </a>
+        <a href="/listings/category/camping">
+          <div class="filter"><i class="fa-solid fa-campground"></i><p>Camping</p></div>
+        </a>
+        <a href="/listings/category/farms">
+          <div class="filter"><i class="fa-solid fa-tractor"></i><p>Farms</p></div>
+        </a>
+        <a href="/listings/category/arctic">
+          <div class="filter"><i class="fa-regular fa-snowflake"></i><p>Arctic</p></div>
+        </a>
+        <a href="/listings/category/domes">
+          <div class="filter"><i class="fa-solid fa-igloo"></i><p>Domes</p></div>
+        </a>
+        <a href="/listings/category/boats">
+          <div class="filter"><i class="fa-solid fa-ship"></i><p>Boats</p></div>
+        </a>
+      </div>
     </div>
-  </div>
 
-</div>
+    <!-- TAX TOGGLE -->
+    <div class="tax-toggle mt-3">
+      <div class="form-check-reverse form-switch">
+        <input class="form-check-input" type="checkbox" id="switchCheckDefault">
+        <label class="form-check-label">Display total after taxes</label>
+      </div>
+    </div>
 
-<!-- TAX TOGGLE -->
-<div class="tax-toggle mt-3">
-  <div class="form-check-reverse form-switch">
-    <input class="form-check-input" type="checkbox" id="switchCheckDefault">
-    <label class="form-check-label">Display total after taxes</label>
   </div>
 </div>
 
 <!-- LISTINGS -->
-<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-4">
-
-  <% for(let listing of allListings) { %>
-    <a href="/listings/<%= listing._id %>" class="listing-link">
-
-      <div class="card listing-card">
-        <img
-          src="<%= listing.image.url %>"
-          class="card-img-top"
-          style="height:20rem"
-        />
-
-        <div class="card-body">
-          <p class="card-text">
-            <b><%= listing.title %></b> <br>
-            ₹ <%= listing.price.toLocaleString("en-IN") %> / night
-            <i class="tax-info"> +18% GST</i>
-          </p>
+<div class="container-fluid">
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-4">
+    <% for(let listing of allListings) { %>
+      <a href="/listings/<%= listing._id %>" class="listing-link">
+        <div class="card listing-card">
+          <img src="<%= listing.image.url %>" class="card-img-top" style="height:20rem" />
+          <div class="card-body">
+            <p class="card-text">
+              <b><%= listing.title %></b><br>
+              ₹ <%= listing.price.toLocaleString("en-IN") %> / night
+              <i class="tax-info"> +18% GST</i>
+            </p>
+          </div>
         </div>
-      </div>
-
-    </a>
-  <% } %>
-
+      </a>
+    <% } %>
+  </div>
 </div>
 
 <script>
-let taxSwitch = document.getElementById("switchCheckDefault");
+  // Tax toggle
+  let taxSwitch = document.getElementById("switchCheckDefault");
+  taxSwitch.addEventListener("click", () => {
+    let taxInfo = document.getElementsByClassName("tax-info");
+    for (let info of taxInfo) {
+      info.style.display = info.style.display === "inline" ? "none" : "inline";
+    }
+  });
 
-taxSwitch.addEventListener("click", () => {
-  let taxInfo = document.getElementsByClassName("tax-info");
-  for (info of taxInfo) {
-    info.style.display =
-      info.style.display === "inline" ? "none" : "inline";
+  // Adjust filters position below navbar dynamically
+  function adjustFiltersTop() {
+    const navbar = document.querySelector('.navbar');
+    const filters = document.querySelector('.filters-section');
+    if (navbar && filters) {
+      filters.style.top = navbar.offsetHeight + 'px';
+    }
   }
-});
+
+  // Run on load
+  adjustFiltersTop();
+
+  // Re-run after mobile navbar expand/collapse finishes
+  const navCollapse = document.querySelector('#navbarNavAltMarkup');
+  if (navCollapse) {
+    navCollapse.addEventListener('shown.bs.collapse', adjustFiltersTop);
+    navCollapse.addEventListener('hidden.bs.collapse', adjustFiltersTop);
+  }
+
+  // Re-run on window resize
+  window.addEventListener('resize', adjustFiltersTop);
 </script>

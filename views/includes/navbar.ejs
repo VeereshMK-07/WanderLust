@@ -1,67 +1,65 @@
 <style>
-/* Prevent content hiding under sticky navbar */
-.page-content{
-  padding-top: 100px;
-}
-/* Search Button */
-.search-btn {
-  background-color: #fe424d !important; 
-  color: #fff !important;               border-radius: 25px;
-  padding: 0.4rem 1rem;
-  font-size: 0.9rem;
-  transition: opacity 0.2s;
-  border: none;
-  cursor: pointer;
-}
+  /* Prevent content hiding under sticky navbar */
+  .page-content {
+    padding-top: 100px;
+  }
 
-.search-btn:hover,
-.search-btn:focus,
-.search-btn:active {
-  opacity: 0.9;
-  color: #fff !important;
-  background-color: #fe424d !important;
-  outline: none;
-  box-shadow: none !important;
-}
+  /* Search Button */
+  .search-btn {
+    background-color: #fe424d !important;
+    color: #fff !important;
+    border-radius: 25px;
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+    transition: opacity 0.2s;
+    border: none;
+    cursor: pointer;
+  }
+  .search-btn:hover,
+  .search-btn:focus,
+  .search-btn:active {
+    opacity: 0.9;
+    color: #fff !important;
+    background-color: #fe424d !important;
+    outline: none;
+    box-shadow: none !important;
+  }
+  .search-btn i {
+    margin-right: 0.5rem;
+  }
 
-.search-btn i{
-  margin-right:0.5rem;
-}
+  /* Search Input */
+  .search-inp {
+    border-radius: 25px;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.9rem;
+  }
 
-/* Search Input */
-.search-inp{
-  border-radius:25px;
-  padding:0.4rem 0.9rem;
-  font-size:0.9rem;
-}
-
-/* Navbar */
-.navbar{
-  padding:0.9rem 0;
-  min-height:75px;
-  background-color:white;
-}
-
+  /* Navbar */
+  .navbar {
+    padding: 0.9rem 0;
+    min-height: 75px;
+    background-color: white;
+    z-index: 1050;  /* ← ADDED: keeps navbar above filters */
+  }
 /* Fix collapse overlap */
-.navbar-collapse{
-  background-color:white;
-}
-
-/* Responsive Fix */
-@media(max-width:768px){
-  .search-btn,
-  .search-inp{
-    width:100%;
+  .navbar-collapse {
+    background-color: white;
   }
-}
 
-@media(min-width:768px){
-  .search-inp{
-    width:420px;
+  /* Responsive Fix */
+  @media (max-width: 768px) {
+    .search-btn,
+    .search-inp {
+      width: 100%;
+    }
   }
-}
+  @media (min-width: 768px) {
+    .search-inp {
+      width: 420px;
+    }
+  }
 </style>
-
 
 <nav class="navbar navbar-expand-md border-bottom sticky-top">
   <div class="container-fluid">
@@ -73,13 +71,14 @@
 
     <!-- Toggle Button -->
     <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false">
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false">
       <span class="navbar-toggler-icon"></span>
     </button>
-<!-- Navbar Content -->
+
+    <!-- Navbar Content -->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
       <!-- Left Links -->
@@ -89,13 +88,9 @@
 
       <!-- Search Form -->
       <form class="d-flex flex-column flex-md-row gap-3 mx-md-auto my-2 my-md-0"
-            role="search"
-            action="/listings/search"
-            method="GET">
-        <input name="q"
-               class="form-control search-inp"
-               type="text"
-               placeholder="Search destinations">
+        role="search" action="/listings/search" method="GET">
+        <input name="q" class="form-control search-inp" type="text"
+          placeholder="Search destinations">
         <button class="btn search-btn" type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>Search
         </button>
@@ -104,22 +99,15 @@
       <!-- Right Links -->
       <div class="navbar-nav ms-md-3">
         <a class="nav-link" href="/listings/new">Airbnb your home</a>
-
         <% if(!currUser) { %>
           <a class="nav-link" href="/signup"><b>Sign Up</b></a>
           <a class="nav-link" href="/login"><b>Log in</b></a>
-        <% } %> 
-
+        <% } %>
         <% if(currUser) { %>
-          <a class="nav-link" href="/logout"><b>Log out</b></a> 
+          <a class="nav-link" href="/logout"><b>Log out</b></a>
         <% } %>
       </div>
 
     </div>
   </div>
 </nav>
-
-<script>
-  const navbarHeight = document.querySelector('.navbar').offsetHeight;
-  document.querySelector('.filters-section').style.top = navbarHeight + 'px';
-</script>
