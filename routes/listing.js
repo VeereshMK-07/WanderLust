@@ -34,6 +34,29 @@ router.get("/search", listingController.searchListings);
 router.get("/new" , isLoggedIn , listingController.renderNewForm);
 
 
+//footer icons routes
+router.get("/facebook",(req, res) => {
+     res.send("Stay Tuned for our Facebook Page!");
+});
+
+router.get("/instagram",(req, res) => {
+     res.send("Stay Tuned for our Instagram Page!");
+});
+
+router.get("/linkedin",(req, res) => {
+     res.send("Stay Tuned for our LinkedIn Page!");
+});
+
+
+//Privacy and Terms routes
+router.get("/privacy",(req, res) => {
+     res.send("Privacy Policy coming soon!");
+});
+
+router.get("/terms",(req, res) => {
+     res.send("Terms and Conditions coming soon!");
+});
+
 router.route("/:id")
 .get(wrapAsync(listingController.showListing))     //show route
 .put(isLoggedIn,
@@ -48,7 +71,6 @@ router.route("/:id")
 
 //Edit route//
 router.get("/:id/edit" , isLoggedIn , isOwner, wrapAsync(listingController.renderEditForm));
-
 
 
 
