@@ -43,7 +43,12 @@ body{
   text-align: center;
 }
 
-
+.f-info-socials {
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical alignment  */
+  gap: 1rem;                 /* spacing between icons */
+}
 
 .f-info-socials,
 .f-info-brand,
@@ -114,5 +119,37 @@ body{
   display: block;
 }
 
+.f-info-links a {
+    text-decoration: none ;
+    color: #222222;
+}
 
 
+.f-info-socials a {
+    text-decoration: none ;
+    color: #222222;
+}
+
+.facebook i {
+    color: #3b5998;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instagram i {
+    color: #e1306c;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkedin i {
+    color: #0077b5;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
